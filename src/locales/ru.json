@@ -1,0 +1,13 @@
+{
+  "details.website": "веб-сайт",
+  "details.release_date": "дата выпуска",
+  "details.gameplay_mode": "режим игры",
+  "details.gameplay_mode.online_multiplayer": "онлайн мультиплеер",
+  "details.gameplay_mode.local_multiplayer": "локальный мультиплеер",
+  "details.price": "цена",
+  "details.expected_revenue": "ожидаемый доход",
+  "details.auditory": "аудитория",
+  "details.bundle_size": "размер",
+  "details.avg_session": "средняя длительность матча",
+  "details.last_updated": "обновлено"
+}

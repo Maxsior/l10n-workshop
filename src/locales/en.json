@@ -1,0 +1,13 @@
+{
+  "details.website": "website",
+  "details.release_date": "release date",
+  "details.gameplay_mode": "gameplay mode",
+  "details.gameplay_mode.online_multiplayer": "online multiplayer",
+  "details.gameplay_mode.local_multiplayer": "local multiplayer",
+  "details.price": "price",
+  "details.expected_revenue": "expected revenue",
+  "details.auditory": "auditory",
+  "details.bundle_size": "bundle size",
+  "details.avg_session": "average session",
+  "details.last_updated": "last updated"
+}
