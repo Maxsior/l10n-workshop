@@ -1,0 +1,25 @@
+.Details {
+  display: flex;
+  flex-direction: column;
+  width: 560px;
+  margin: 0 auto;
+}
+
+.Row {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  column-gap: 16px;
+  padding: 16px;
+  border-bottom: 1px solid #CCCCCC;
+  font-size: 14px;
+}
+
+.Row:last-child {
+  border-bottom: none;
+  margin-bottom: 16px;
+}
+
+.RowTitle {
+  text-transform: capitalize;
+  color: #767E89;
+}

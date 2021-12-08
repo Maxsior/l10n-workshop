@@ -1,0 +1,21 @@
+.Header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #07244A;
+  align-items: center;
+  padding: 0 32px;
+  height: 64px;
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+
+  flex: 0 0 auto;
+}
+
+.Logo {
+  text-transform: uppercase;
+}

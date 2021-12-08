@@ -1,0 +1,17 @@
+.Main {
+  background: #FFFFFF;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+
+  margin: 48px auto;
+  padding: 32px 40px;
+  width: 66%;
+  max-width: 1000px;
+}
+
+.Title {
+  font-family: Roboto, sans-serif;
+  font-size: 20px;
+  margin-bottom: 40px;
+  font-weight: normal;
+}
