@@ -1,5 +1,11 @@
 import React from 'react';
-
+import {
+    FormattedDate,
+    FormattedNumber,
+    FormattedRelativeTime,
+    FormattedTime,
+    FormattedMessage,
+} from 'react-intl';
 import Details from './Details';
 
 import styles from './Main.module.css'
@@ -10,34 +16,62 @@ function Main() {
             <h1 className={styles.Title}>Cave Fever</h1>
 
             <Details>
-                <Details.Row title="Website">
+                <Details.Row title="details.website">
                     <a href="https://restlessboat-games.itch.io/cave-fever">
                         https://restlessboat-games.itch.io/cave-fever
                     </a>
                 </Details.Row>
-                <Details.Row title="Release Date">
-                    February 26, 2022
+                <Details.Row title="details.release_date">
+                    <FormattedDate
+                        value={new Date('February 26, 2022')}
+                        year="numeric"
+                        month="long"
+                        day="2-digit"
+                    />
                 </Details.Row>
-                <Details.Row title="Gameplay Mode">
-                    Online Multiplayer
+                <Details.Row title="details.gameplay_mode">
+                    <FormattedMessage
+                        id="details.gameplay_mode.online_multiplayer"
+                    />
                 </Details.Row>
-                <Details.Row title="Price">
-                    $5.99
+                <Details.Row title="details.price">
+                    <FormattedNumber
+                        value={5.99}
+                        intlStyle="currency"
+                        currency="USD"
+                    />
                 </Details.Row>
-                <Details.Row title="Expected Revenue">
-                    $100,000.00
+                <Details.Row title="details.expected_revenue">
+                    <FormattedNumber
+                        value={100000}
+                        intlStyle="currency"
+                        currency="USD"
+                    />
                 </Details.Row>
-                <Details.Row title="Auditory">
-                    2,301
+                <Details.Row title="details.auditory">
+                    <FormattedNumber
+                        value={2_301}
+                    />
                 </Details.Row>
-                <Details.Row title="Bundle Size">
-                    1.2MB
+                <Details.Row title="details.bundle_size">
+                    <FormattedNumber
+                        value={1.2}
+                        intlStyle={'unit'}
+                        unit="megabyte"
+                    />
                 </Details.Row>
-                <Details.Row title="Average Session">
-                    1:22
+                <Details.Row title="details.avg_session">
+                    <FormattedTime
+                        value={new Date(82000)}
+                        minute="numeric"
+                        second='numeric'
+                    />
                 </Details.Row>
-                <Details.Row title="Last Update">
-                    2 days ago
+                <Details.Row title="details.last_updated">
+                    <FormattedRelativeTime
+                        value="-2"
+                        unit="day"
+                    />
                 </Details.Row>
             </Details>
         </div>

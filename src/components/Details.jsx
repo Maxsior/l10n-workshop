@@ -2,7 +2,9 @@ import React from 'react';
 
 import styles from './Details.module.css';
 
-function Details({ children }) {
+import {FormattedMessage} from 'react-intl';
+
+function Details({children}) {
     return (
         <div className={styles.Details}>
             {children}
@@ -10,10 +12,15 @@ function Details({ children }) {
     );
 }
 
-Details.Row = function({ title, children }) {
+Details.Row = function ({title, children}) {
     return (
         <div className={styles.Row}>
-            <div className={styles.RowTitle}>{title}</div>
+            <div className={styles.RowTitle}>
+                <FormattedMessage
+                    id={title}
+                    defaultMessage="???"
+                />
+            </div>
             <div>{children}</div>
         </div>
     );
