@@ -1,29 +1,25 @@
 import React from 'react';
-import { injectIntl, useIntl } from "react-intl";
+import {IntlProvider} from "react-intl";
 
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import Main from './components/Main';
-
-import styles from './App.module.css';
-
+import {locales} from "./locales";
+import AppContainer from "./AppContainer";
 
 function App() {
-  const {locale} = useIntl();
+  const [locale, setLocale] = React.useState('ru')
+
+  const handleChangeLanguage = (txt) => {
+    setLocale(txt);
+  }
 
   return (
-      <div
-        className={styles.App}
-        dir={locale === 'ar' ? 'rtl' : 'ltr'}
-      >
-        <Header/>
-        <div className={styles.Container}>
-          <Sidebar/>
-          <Main/>
-        </div>
-      </div>
-
+    <IntlProvider
+      locale={locale}
+      messages={locales[locale]}
+      defaultLocale={'en'}
+    >
+      <AppContainer changeLanguage={handleChangeLanguage}/>
+    </IntlProvider>
   );
 }
 
-export default injectIntl(App);
+export default App;
