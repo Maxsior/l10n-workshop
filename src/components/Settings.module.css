@@ -5,3 +5,7 @@
   background-color: transparent;
   cursor: pointer;
 }
+
+.Container {
+  position: relative;
+}
