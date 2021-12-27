@@ -9,5 +9,8 @@
   "details.auditory": "аудитория",
   "details.bundle_size": "размер",
   "details.avg_session": "средняя длительность матча",
-  "details.last_updated": "обновлено"
+  "details.last_updated": "обновлено",
+  "selector.language": "язык",
+  "language": "Русский",
+  "code": "ru"
 }

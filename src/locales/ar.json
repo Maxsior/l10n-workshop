@@ -3,11 +3,14 @@
   "details.release_date": "تاريخ الإصدار",
   "details.gameplay_mode": "وضع اللعب" ,
   "details.gameplay_mode.online_multiplayer": "متعددة اللاعبين عبر الإنترنت",
-  "details.gameplay_mode.local_multiplayer": "local multiplayer",
+  "details.gameplay_mode.local_multiplayer": "متعدد اللاعبين المحلي",
   "details.price": "سعر",
   "details.expected_revenue": "الإيرادات المتوقعة",
   "details.auditory": "سمعي",
   "details.bundle_size": "حجم الحزمة",
   "details.avg_session": "متوسط الجلسة",
-  "details.last_updated": "آخر تحديث"
+  "details.last_updated": "آخر تحديث",
+  "selector.language": "لغة",
+  "language": "عربي",
+  "code": "ar"
 }

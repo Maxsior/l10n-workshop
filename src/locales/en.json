@@ -9,5 +9,8 @@
   "details.auditory": "auditory",
   "details.bundle_size": "bundle size",
   "details.avg_session": "average session",
-  "details.last_updated": "last updated"
+  "details.last_updated": "last updated",
+  "selector.language": "language",
+  "language": "English",
+  "code": "en"
 }

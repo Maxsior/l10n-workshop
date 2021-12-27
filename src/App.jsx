@@ -1,20 +1,45 @@
-import React from 'react';
+import React, {useState, useEffect, useCallback } from 'react';
 
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import Main from './components/Main';
+import WrapperInject from './components/WrapperInject';
 
-import styles from './App.module.css';
+import {IntlProvider} from 'react-intl';
+import en from './locales/en.json';
+import ru from './locales/ru.json';
+import ar from './locales/ar.json';
+
 
 function App() {
+    const locales = {en, ru, ar};
+
+    const languages = Object.keys(locales).map((code) => ({
+      code,
+      name: locales[code].language
+  }));
+
+    const [currentLocale, setCurrentLocale] = useState('');
+
+    useEffect(() => {
+        setCurrentLocale(window.navigator.language);
+    }, []);
+
+    const handleChange = useCallback(
+      ({target: {value}}) => {
+        setCurrentLocale(value);
+    }, []);
+
     return (
-        <div className={styles.App}>
-            <Header />
-            <div className={styles.Container}>
-                <Sidebar />
-                <Main />
-            </div>
-        </div>
+        <IntlProvider
+            defaultLocale={'en'}
+            locale={currentLocale}
+            messages={locales[currentLocale]}
+        >
+            <WrapperInject
+                handleChange={handleChange}
+                currentLocale={currentLocale}
+                languages={languages}
+            />
+        </IntlProvider>
+ 
     );
 }
 
