@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect, useCallback } from 'react';
 
 import WrapperInject from './components/WrapperInject';
 
@@ -9,17 +9,23 @@ import ar from './locales/ar.json';
 
 
 function App() {
-    const locales = {
-        'en': en,
-        'ru': ru,
-        'ar': ar,
-    }
+    const locales = {en, ru, ar};
 
-    const [currentLocale, setCurrentLocale] = useState('en');
+    const languages = Object.keys(locales).map((code) => ({
+      code,
+      name: locales[code].language
+  }));
 
-    const handleChange = ({target: {value}}) => {
-        setCurrentLocale(value)
-    }
+    const [currentLocale, setCurrentLocale] = useState('');
+
+    useEffect(() => {
+        setCurrentLocale(window.navigator.language);
+    }, []);
+
+    const handleChange = useCallback(
+      ({target: {value}}) => {
+        setCurrentLocale(value);
+    }, []);
 
     return (
         <IntlProvider
@@ -30,8 +36,10 @@ function App() {
             <WrapperInject
                 handleChange={handleChange}
                 currentLocale={currentLocale}
+                languages={languages}
             />
         </IntlProvider>
+ 
     );
 }
 

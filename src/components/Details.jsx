@@ -2,6 +2,8 @@ import React from 'react';
 
 import styles from './Details.module.css';
 
+import en from '../locales/en.json';
+
 import {FormattedMessage} from 'react-intl';
 
 function Details({children}) {
@@ -18,7 +20,7 @@ Details.Row = function ({title, children}) {
             <div className={styles.RowTitle}>
                 <FormattedMessage
                     id={title}
-                    defaultMessage="???"
+                    defaultMessage={en[title]}
                 />
             </div>
             <div>{children}</div>

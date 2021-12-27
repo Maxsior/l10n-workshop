@@ -32,6 +32,8 @@ function Main() {
                 <Details.Row title="details.gameplay_mode">
                     <FormattedMessage
                         id="details.gameplay_mode.online_multiplayer"
+                        defaultMessage="online multiplayer"
+                        values={'online multiplayer'}
                     />
                 </Details.Row>
                 <Details.Row title="details.price">
@@ -56,7 +58,7 @@ function Main() {
                 <Details.Row title="details.bundle_size">
                     <FormattedNumber
                         value={1.2}
-                        intlStyle={'unit'}
+                        intlStyle="unit"
                         unit="megabyte"
                     />
                 </Details.Row>
@@ -69,7 +71,7 @@ function Main() {
                 </Details.Row>
                 <Details.Row title="details.last_updated">
                     <FormattedRelativeTime
-                        value="-2"
+                        value={-2}
                         unit="day"
                     />
                 </Details.Row>

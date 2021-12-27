@@ -9,5 +9,8 @@
   "details.auditory": "سمعي",
   "details.bundle_size": "حجم الحزمة",
   "details.avg_session": "متوسط الجلسة",
-  "details.last_updated": "آخر تحديث"
+  "details.last_updated": "آخر تحديث",
+  "selector.language": "لغة",
+  "language": "عربي",
+  "code": "ar"
 }

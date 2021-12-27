@@ -9,7 +9,7 @@ import styles from '../App.module.css';
 import {injectIntl} from 'react-intl';
 
 
-function WrapperInject({intl: {locale}, currentLocale, handleChange}) {
+function WrapperInject({intl: {locale}, currentLocale, handleChange, languages}) {
     return (
         <div
             className={styles.App}
@@ -18,6 +18,7 @@ function WrapperInject({intl: {locale}, currentLocale, handleChange}) {
             <Header
                 currentLocale={currentLocale}
                 handleChange={handleChange}
+                languages={languages}
             />
             <div className={styles.Container}>
                 <Sidebar/>
